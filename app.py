@@ -6,7 +6,7 @@ app = Flask(__name__)
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
-        return request.form.get['d_url']
+        return request.form['d_url']
         
     else:
         return "Get Method"
