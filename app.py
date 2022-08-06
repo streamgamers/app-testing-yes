@@ -6,7 +6,7 @@ app = Flask(__name__)
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
-        return request.form['d_url']
+        return jsonpickle.encode(request.form['d_url'])
 #         yt_video = YouTube(url)
 #         videos = yt_video.streams.filter(only_audio=True).all()
 #         res_list = list(videos)
