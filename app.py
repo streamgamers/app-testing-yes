@@ -2,6 +2,9 @@
 from flask import Flask, jsonify, request
 from pytube import YouTube
 import jsonpickle
+import os
+import sys
+sys.path.insert(0, os.path.dirname(_file_))
 app = Flask(__name__)
 
 @app.route('/youtube', methods=['POST'])
@@ -18,5 +21,5 @@ def hello(environ, start_response):
     
     
     
-if __name__ == "__app__":
+if __name__ == "__main__":
     app.run(debug =True)
