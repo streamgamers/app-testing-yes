@@ -6,7 +6,7 @@ app = Flask(__name__)
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
-           return "Post Method"
+           return request.form['d_url']
 #          yt_video = YouTube(request.form["d_url"])
 #          videos = yt_video.streams.filter(only_audio=True).all()
 #          res_list = list(videos)
@@ -15,7 +15,7 @@ def login():
 
         
     else:
-        return "Get Method"
+        return request.args.get('d_url')
     
 if __name__ == "__main__":
     app.run(debug =True)
