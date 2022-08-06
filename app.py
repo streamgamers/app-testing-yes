@@ -9,10 +9,9 @@ def login():
         url = request.form['d_url']
         yt_video = YouTube(url)
         videos = yt_video.streams
-        res_list = list(enumerate(videos))
-        j = jsonpickle.encode(res_list)
+        res_list = list(videos)
+        return jsonpickle.encode(res_list)
 
-        return "Hello"
         
     else:
         return "Get Method"
