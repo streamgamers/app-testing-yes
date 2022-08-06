@@ -1,6 +1,7 @@
+from pytube import YouTube
 from flask import request
 from flask import Flask
-from pytube import YouTube
+
 import jsonpickle
 app = Flask(__name__)
 @app.route('/login', methods=['GET', 'POST'])
