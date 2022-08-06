@@ -6,7 +6,7 @@ import os
 import sys
 
 app = Flask(__name__)
-sys.path.insert(0, os.path.dirname(_file_))
+
 @app.route('/youtube', methods=['POST'])
 def hello(environ, start_response):
     start_response('200 OK', [('Content-Type', 'application/json')])
