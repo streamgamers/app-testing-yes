@@ -5,7 +5,7 @@ import jsonpickle
 app = Flask(__name__)
 
 @app.route('/youtube', methods=['POST'])
-def app(environ, start_response):
+def hello(environ, start_response):
     start_response('200 OK', [('Content-Type', 'application/json')])
     url = request.form['d_url']
     yt_video = YouTube(url)
