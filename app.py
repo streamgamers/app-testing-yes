@@ -8,7 +8,7 @@ def login():
     if request.method == 'POST':
         url = request.form['d_url']
         yt_video = YouTube(url)
-        videos = yt_video.streams.filter(file_extension="mp3")
+        videos = yt_video.streams.filter(only_audio=True).all()
         res_list = list(videos)
         return jsonpickle.encode(res_list)
 
