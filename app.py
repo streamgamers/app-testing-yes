@@ -8,7 +8,7 @@ app = Flask(__name__)
 def login():
     if request.method == 'POST':
 #            return request.form['d_url']
-         yt_video = YouTube(request.form["d_url"])
+         yt_video = YouTube(request.form['d_url'])
          return yr_video.title
 #          videos = yt_video.streams
 #          res_list = list(videos)
