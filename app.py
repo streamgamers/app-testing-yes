@@ -9,9 +9,6 @@ def login():
     if request.method == 'POST':
 #            return request.form['d_url']
          yt_video = YouTube(request.form['d_url'],
-                            on_progress_callback=progress_func,
-                            on_complete_callback=complete_func,
-                            proxies=my_proxies,
                             use_oauth=False,
                             allow_oauth_cache=True)
          return yr_video.title
